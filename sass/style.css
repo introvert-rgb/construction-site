@@ -33,7 +33,6 @@ ul li a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: 5;
 }
 
 .header nav {
@@ -51,6 +50,16 @@ ul li a {
           align-items: center;
   position: relative;
   z-index: 5;
+}
+
+.header nav::after {
+  z-index: 1;
+  content: '';
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .header nav .logo img {
@@ -110,6 +119,16 @@ ul li a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.header .title-container::after {
+  z-index: 1;
+  content: '';
+  position: absolute;
+  height: 100%;
+  inset: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .header .title-container .title {
