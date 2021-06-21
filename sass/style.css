@@ -14,17 +14,6 @@ ul li a {
   text-decoration: none;
 }
 
-.hidden {
-  opacity: 0;
-  position: relative;
-  z-index: -1;
-}
-
-.close {
-  -webkit-transform: translateX(-100vw);
-          transform: translateX(-100vw);
-}
-
 .header {
   background: url(../images/excavator-1174428_960_720.jpg);
   width: 100vw;
@@ -33,15 +22,29 @@ ul li a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  bottom: 0;
 }
 
 .header nav {
   width: 100vw;
   margin: 0 auto;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 2em 2em 0em 2em;
+  padding: 2em 2em 1em 2em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -53,17 +56,19 @@ ul li a {
 }
 
 .header nav::after {
-  z-index: 1;
   content: '';
-  height: 100%;
-  width: 100%;
-  inset: 0;
   position: absolute;
-  background: rgba(255, 255, 255, 0.3);
+  top: 0;
+  height: 12.5vh;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: -1;
+  bottom: 0;
 }
 
 .header nav .logo img {
-  height: 60px;
+  height: 40px;
 }
 
 .header nav .menu .nav-links {
@@ -78,7 +83,7 @@ ul li a {
 .header nav .menu .nav-links .nav-link .nav-link-item {
   margin: 0em 1em;
   font-family: "Alata", sans-serif;
-  color: black;
+  color: white;
   position: relative;
 }
 
@@ -87,7 +92,7 @@ ul li a {
   position: absolute;
   width: 100%;
   height: 1px;
-  background: black;
+  background: white;
   bottom: -4px;
   left: 0;
   -webkit-transform: scale(0);
@@ -112,7 +117,7 @@ ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 80vh;
+  height: 90vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -121,23 +126,13 @@ ul li a {
           justify-content: flex-start;
 }
 
-.header .title-container::after {
-  z-index: 1;
-  content: '';
-  position: absolute;
-  height: 100%;
-  inset: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-}
-
 .header .title-container .title {
   padding: 0.6em;
   font-family: "Alata", sans-serif;
   font-weight: 300;
-  color: black;
-  width: 14ch;
-  font-size: 4rem;
+  color: white;
+  width: 16ch;
+  font-size: 5rem;
   line-height: 1.1;
   z-index: 2;
   text-transform: uppercase;
@@ -196,5 +191,139 @@ ul li a {
 
 .btn:hover {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 767px) {
+  .fixed {
+    position: fixed;
+  }
+  .open {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+  .header {
+    height: 100vh;
+    background: url(../Images/mobile/image-hero.jpg);
+    background-size: cover;
+  }
+  .header nav {
+    padding-top: 2em;
+  }
+  .header nav .menu-hamburger {
+    display: block;
+    position: relative;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    margin-right: 1em;
+  }
+  .header nav .menu-hamburger svg {
+    position: absolute;
+    z-index: 10;
+  }
+  .header nav .logo {
+    margin-left: -0.5em;
+    position: relative;
+    z-index: 10;
+  }
+  .header nav .menu {
+    background: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+  }
+  .header nav .menu .nav-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 85%;
+    height: 100vh;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header nav .menu .nav-links .nav-link {
+    font-size: 1.5rem;
+    margin-bottom: 0.7em;
+  }
+  .header nav .menu .nav-links .nav-link .nav-link-item {
+    margin: 0em;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .header .title-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .title-container .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .fixed {
+    position: fixed;
+  }
+  .open {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+  .header nav {
+    padding-top: 2em;
+  }
+  .header nav .menu-hamburger {
+    display: block;
+    position: relative;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    margin-right: 1em;
+  }
+  .header nav .menu-hamburger svg {
+    position: absolute;
+    z-index: 10;
+  }
+  .header nav .logo {
+    margin-left: -0.5em;
+    position: relative;
+    z-index: 10;
+  }
+  .header nav .menu {
+    background: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+  }
+  .header nav .menu .nav-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 85%;
+    height: 100vh;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header nav .menu .nav-links .nav-link {
+    font-size: 1.5rem;
+    margin-bottom: 0.7em;
+  }
+  .header nav .menu .nav-links .nav-link .nav-link-item {
+    margin: 0em;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+  }
 }
 /*# sourceMappingURL=style.css.map */
