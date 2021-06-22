@@ -16,9 +16,8 @@ ul li a {
 
 .header {
   background: url(../images/excavator-1174428_960_720.jpg);
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  max-width: 1440px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -38,13 +37,12 @@ ul li a {
 }
 
 .header nav {
-  width: 100vw;
-  margin: 0 auto;
-  height: 10vh;
+  width: 100%;
+  padding: 1.5em;
+  max-width: 1440px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 2em 2em 1em 2em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -59,7 +57,7 @@ ul li a {
   content: '';
   position: absolute;
   top: 0;
-  height: 12.5vh;
+  width: 100%;
   left: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.4);
@@ -198,45 +196,68 @@ ul li a {
     position: fixed;
   }
   .open {
-    -webkit-transform: translateX(-100vw);
-            transform: translateX(-100vw);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   .header {
     height: 100vh;
-    background: url(../Images/mobile/image-hero.jpg);
+    background: url(../images/excavator-1174428_960_720.jpg);
     background-size: cover;
   }
   .header nav {
+    position: fixed;
     padding-top: 2em;
   }
   .header nav .menu-hamburger {
     display: block;
     position: relative;
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-    margin-right: 1em;
+    z-index: 1000;
   }
-  .header nav .menu-hamburger svg {
-    position: absolute;
-    z-index: 10;
+  .header nav .menu-hamburger span {
+    display: block;
+    background-color: white;
+    margin: .3em;
+    height: 3px;
+    width: 25px;
+    -webkit-transform-origin: 9% 56%;
+            transform-origin: 9% 56%;
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
   }
-  .header nav .logo {
+  .header nav .menu-hamburger.close > span:first-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background-color: black;
+  }
+  .header nav .menu-hamburger.close > span:nth-child(2) {
+    opacity: 0;
+    background-color: black;
+  }
+  .header nav .menu-hamburger.close > span:last-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    background-color: black;
+  }
+  .logo {
     margin-left: -0.5em;
     position: relative;
     z-index: 10;
   }
-  .header nav .menu {
-    background: black;
+  .menu {
+    background: white;
     position: fixed;
     top: 0;
+    width: 80%;
     bottom: 0;
+    z-index: 12;
+    margin-left: auto;
     left: 0;
     right: 0;
     height: 100vh;
     -webkit-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
   }
-  .header nav .menu .nav-links {
+  .menu .nav-links {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -247,23 +268,19 @@ ul li a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .header nav .menu .nav-links .nav-link {
+  .menu .nav-links .nav-link {
     font-size: 1.5rem;
     margin-bottom: 0.7em;
   }
-  .header nav .menu .nav-links .nav-link .nav-link-item {
+  .menu .nav-links .nav-link .nav-link-item {
     margin: 0em;
     text-transform: uppercase;
     font-family: "Josefin Sans", sans-serif;
-  }
-  .header .title-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .header .title-container .title {
-    font-size: 2.2rem;
+    color: black !important;
   }
 }
 
@@ -272,39 +289,69 @@ ul li a {
     position: fixed;
   }
   .open {
-    -webkit-transform: translateX(-100vw);
-            transform: translateX(-100vw);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  .header {
+    height: 100vh;
+    background: url(../images/excavator-1174428_960_720.jpg);
+    background-size: cover;
+    background-position: center;
   }
   .header nav {
+    position: fixed;
     padding-top: 2em;
   }
   .header nav .menu-hamburger {
     display: block;
     position: relative;
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-    margin-right: 1em;
+    z-index: 1000;
   }
-  .header nav .menu-hamburger svg {
-    position: absolute;
-    z-index: 10;
+  .header nav .menu-hamburger span {
+    display: block;
+    background-color: white;
+    margin: .3em;
+    height: 3px;
+    width: 25px;
+    -webkit-transform-origin: 9% 56%;
+            transform-origin: 9% 56%;
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
   }
-  .header nav .logo {
+  .header nav .menu-hamburger.close > span:first-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background-color: black;
+  }
+  .header nav .menu-hamburger.close > span:nth-child(2) {
+    opacity: 0;
+    background-color: black;
+  }
+  .header nav .menu-hamburger.close > span:last-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    background-color: black;
+  }
+  .logo {
     margin-left: -0.5em;
     position: relative;
     z-index: 10;
   }
-  .header nav .menu {
-    background: black;
-    position: absolute;
+  .menu {
+    background: white;
+    position: fixed;
     top: 0;
+    width: 80%;
     bottom: 0;
+    z-index: 12;
+    margin-left: auto;
     left: 0;
     right: 0;
+    height: 100vh;
     -webkit-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
   }
-  .header nav .menu .nav-links {
+  .menu .nav-links {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -315,15 +362,19 @@ ul li a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .header nav .menu .nav-links .nav-link {
+  .menu .nav-links .nav-link {
     font-size: 1.5rem;
     margin-bottom: 0.7em;
   }
-  .header nav .menu .nav-links .nav-link .nav-link-item {
+  .menu .nav-links .nav-link .nav-link-item {
     margin: 0em;
     text-transform: uppercase;
     font-family: "Josefin Sans", sans-serif;
+    color: black !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
