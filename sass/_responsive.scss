@@ -23,21 +23,18 @@
                     margin: .3em;
                     height: 3px;
                     width: 25px;
-                    transform-origin: 9% 56%;
+                    transform-origin: 7% 68%;
                     transition: all 250ms ease-in-out;
                 }
                 &.close {
                     >span:first-child {
                         transform: rotate(45deg);
-                        background-color: $Black;
                     }
                     >span:nth-child(2) {
                         opacity: 0;
-                        background-color: $Black;
                     }
                     >span:last-child {
                         transform: rotate(-45deg);
-                        background-color: $Black;
                     }
                 }
             }
@@ -67,6 +64,19 @@
             margin: 0 auto;
             justify-content: center;
             align-items: center;
+            .nav-btn-link {
+                margin-top: 2.5em;
+                margin-right: 1em;
+                border: 2px solid $Black;
+                a {
+                    .btn-link {
+                        border: none;
+                        padding: 0.3em 0.5em;
+                        background-color: $white;
+                        font-size: 1.5rem !important;
+                    }
+                }
+            }
             .nav-link {
                 font-size: 1.5rem;
                 margin-bottom: 0.7em;
@@ -76,6 +86,22 @@
                     font-family: $text;
                     color: $Black !important;
                 }
+            }
+        }
+    }
+    //content on hero
+    .title-container {
+        .title-box {
+            width: 80%;
+            margin: 0 auto;
+            .title {
+                padding-top: 3em;
+                font-size: 2.5rem !important;
+                width: 100%;
+            }
+            .title-content {
+                padding-top: 1em;
+                width: 100%;
             }
         }
     }
@@ -95,7 +121,6 @@
         background-size: cover;
         background-position: center;
         nav {
-            position: fixed;
             padding-top: 2em;
             .menu-hamburger {
                 display: block;
@@ -103,7 +128,7 @@
                 z-index: 1000;
                 span {
                     display: block;
-                    background-color: white;
+                    background-color: $Black;
                     margin: .3em;
                     height: 3px;
                     width: 25px;
@@ -151,6 +176,19 @@
             margin: 0 auto;
             justify-content: center;
             align-items: center;
+            .nav-btn-link {
+                margin-top: 2.5em;
+                margin-right: 1em;
+                border: 2px solid $Black;
+                a {
+                    .btn-link {
+                        border: none;
+                        padding: 0.3em 0.5em;
+                        background-color: $white;
+                        font-size: 1.5rem !important;
+                    }
+                }
+            }
             .nav-link {
                 font-size: 1.5rem;
                 margin-bottom: 0.7em;
@@ -160,6 +198,14 @@
                     font-family: $text;
                     color: $Black !important;
                 }
+            }
+        }
+    }
+    //content on hero
+    .title-container {
+        .title-box {
+            .title {
+                font-size: 3rem;
             }
         }
     }
