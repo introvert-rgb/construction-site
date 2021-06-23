@@ -73,7 +73,7 @@
                         border: none;
                         padding: 0.3em 0.5em;
                         background-color: $white;
-                        font-size: 1.5rem !important;
+                        font-size: 1.5rem;
                     }
                 }
             }
@@ -102,6 +102,69 @@
             .title-content {
                 padding-top: 1em;
                 width: 100%;
+            }
+        }
+    }
+    .about-section {
+        width: 100%;
+        max-width: 1440px;
+        margin-bottom: 3em;
+        .about-content {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .about-content-head {
+                display: flex;
+                font-family: $heading;
+                font-size: 2rem !important;
+                text-align: center;
+                margin: 0 auto;
+            }
+            .about-image {
+                padding-top: 1em;
+                width: 100%;
+                padding-bottom: 1em;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .about-details {
+                width: 100%;
+                font-family: $text;
+                text-align: center;
+                padding: 1em 0em;
+                .about-head {
+                    display: none;
+                }
+                .about-details-content {
+                    width: 100%;
+                    p {
+                        padding-bottom: 1.5em;
+                    }
+                }
+                .about-btn {
+                    padding: 1em 0em;
+                    a {
+                        .btn-link {
+                            cursor: pointer;
+                            border: 2px solid $Black;
+                            font-weight: 400;
+                            font-family: $heading;
+                            padding: 0.4em 0.6em;
+                            background-color: transparent;
+                            font-size: 1rem;
+                            transition: all 250ms ease-in-out;
+                            &:hover {
+                                color: $white;
+                                background-color: $Black;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -206,6 +269,41 @@
         .title-box {
             .title {
                 font-size: 3rem;
+            }
+        }
+    }
+    .about-details {
+        width: 50%;
+        padding: 0em 0em 0em 3em;
+        font-family: $text;
+        .about-head {
+            font-family: $heading;
+            font-size: 1.7rem !important;
+            padding-bottom: 1em;
+        }
+        .about-details-content {
+            width: 100%;
+            p {
+                padding-bottom: 1.5em;
+            }
+        }
+        .about-btn {
+            padding: 1em 0em;
+            a {
+                .btn-link {
+                    cursor: pointer;
+                    border: 2px solid $Black;
+                    font-weight: 400;
+                    font-family: $heading;
+                    padding: 0.4em 0.6em;
+                    background-color: transparent;
+                    font-size: 1rem;
+                    transition: all 250ms ease-in-out;
+                    &:hover {
+                        color: $white;
+                        background-color: $Black;
+                    }
+                }
             }
         }
     }
