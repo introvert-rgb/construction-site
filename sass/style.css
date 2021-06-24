@@ -304,6 +304,20 @@ ul li a {
   padding: 0.5em;
 }
 
+.review-section .review-container .dots-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.review-section .review-container .dots-container .dots {
+  margin: 0.5em;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: white;
+}
+
 .review-section .review-container .card-container {
   width: 100%;
   display: -webkit-box;
@@ -311,7 +325,6 @@ ul li a {
   display: flex;
   overflow-x: auto;
   background: rgba(255, 255, 255, 0.2);
-  margin-bottom: 2em;
 }
 
 .review-section .review-container .card-container .card {

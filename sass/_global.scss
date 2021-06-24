@@ -243,12 +243,21 @@ ul {
             position: relative;
             padding: 0.5em;
         }
+        .dots-container {
+            display: flex;
+            .dots {
+                margin: 0.5em;
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background: $white;
+            }
+        }
         .card-container {
             width: 100%;
             display: flex;
             overflow-x: auto;
             background: rgba(255, 255, 255, 0.2);
-            margin-bottom: 2em;
             .card {
                 min-width: 260px;
                 width: 280px;
