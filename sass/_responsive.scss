@@ -1,8 +1,8 @@
 @include media-mobile {
     //menu
-    .fixed {
-        position: fixed;
-    }
+    // .fixed {
+    //     overflow: hidden;
+    // }
     .open {
         transform: translateX(100%);
     }
@@ -10,87 +10,87 @@
         height: 100vh;
         background: url(../images/excavator-1174428_960_720.jpg);
         background-size: cover;
-        nav {
-            position: fixed;
-            padding-top: 2em;
-            .menu-hamburger {
-                display: block;
-                position: relative;
-                z-index: 1000;
-                span {
+        .nav-container {
+            width: 100%;
+            nav {
+                padding-top: 2em;
+                .menu-hamburger {
                     display: block;
-                    background-color: white;
-                    margin: .3em;
-                    height: 3px;
-                    width: 25px;
-                    transform-origin: 7% 68%;
-                    transition: all 250ms ease-in-out;
-                }
-                &.close {
-                    >span:first-child {
-                        transform: rotate(45deg);
+                    position: relative;
+                    z-index: 1000;
+                    span {
+                        display: block;
+                        background-color: $Black;
+                        margin: .3em;
+                        height: 3px;
+                        width: 25px;
+                        transform-origin: 7% 68%;
+                        transition: all 250ms ease-in-out;
                     }
-                    >span:nth-child(2) {
-                        opacity: 0;
-                    }
-                    >span:last-child {
-                        transform: rotate(-45deg);
+                    &.close {
+                        >span:first-child {
+                            transform: rotate(45deg);
+                        }
+                        >span:nth-child(2) {
+                            opacity: 0;
+                        }
+                        >span:last-child {
+                            transform: rotate(-45deg);
+                        }
                     }
                 }
             }
         }
-    }
-    .logo {
-        margin-left: -0.5em;
-        position: relative;
-        z-index: 10;
-    }
-    .menu {
-        background: $white;
-        position: fixed;
-        top: 0;
-        width: 80%;
-        bottom: 0;
-        z-index: 12;
-        margin-left: auto;
-        left: 0;
-        right: 0;
-        height: 100vh;
-        transition: all 250ms ease-in-out;
-        .nav-links {
-            flex-direction: column;
-            width: 85%;
-            height: 100vh;
-            margin: 0 auto;
-            justify-content: center;
-            align-items: center;
-            .nav-btn-link {
-                margin-top: 2.5em;
-                margin-right: 1em;
-                border: 2px solid $Black;
-                a {
-                    .btn-link {
-                        border: none;
-                        padding: 0.3em 0.5em;
-                        background-color: $white;
-                        font-size: 1.5rem;
+        .logo {
+            margin-left: -0.5em;
+            position: relative;
+            z-index: 10;
+        }
+        .menu {
+            background: $white;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            right: 0;
+            transition: all 250ms ease-in-out;
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                .nav-btn-link {
+                    margin-top: 2.5em;
+                    margin-right: 1em;
+                    border: 2px solid $Black;
+                    a {
+                        .btn-link {
+                            border: none;
+                            padding: 0.3em 0.5em;
+                            background-color: $white;
+                            font-size: 1.5rem;
+                        }
                     }
                 }
-            }
-            .nav-link {
-                font-size: 1.5rem;
-                margin-bottom: 0.7em;
-                .nav-link-item {
-                    margin: 0em;
-                    text-transform: uppercase;
-                    font-family: $text;
-                    color: $Black !important;
+                .nav-link {
+                    font-size: 1.5rem;
+                    margin-bottom: 0.7em;
+                    .nav-link-item {
+                        margin: 0em;
+                        text-transform: uppercase;
+                        font-family: $text;
+                        color: $Black !important;
+                    }
                 }
             }
         }
     }
     //content on hero
     .title-container {
+        margin-bottom: 5em;
         .title-box {
             width: 80%;
             margin: 0 auto;
@@ -108,7 +108,7 @@
     .about-section {
         width: 100%;
         max-width: 1440px;
-        margin-bottom: 3em;
+        margin-bottom: 5em;
         .about-content {
             width: 80%;
             margin: 0 auto;
@@ -168,6 +168,14 @@
             }
         }
     }
+    .review-section {
+        margin-bottom: 5rem;
+        .review-container {
+            width: 100%;
+            margin: 0 auto;
+            font-size: 2rem;
+        }
+    }
 }
 
 @include media-tablet {
@@ -183,83 +191,82 @@
         background: url(../images/excavator-1174428_960_720.jpg);
         background-size: cover;
         background-position: center;
-        nav {
-            padding-top: 2em;
-            .menu-hamburger {
-                display: block;
-                position: relative;
-                z-index: 1000;
-                span {
+        .nav-container {
+            nav {
+                padding-top: 2em;
+                .menu-hamburger {
                     display: block;
-                    background-color: $Black;
-                    margin: .3em;
-                    height: 3px;
-                    width: 25px;
-                    transform-origin: 9% 56%;
-                    transition: all 250ms ease-in-out;
-                }
-                &.close {
-                    >span:first-child {
-                        transform: rotate(45deg);
+                    position: relative;
+                    z-index: 1000;
+                    span {
+                        display: block;
                         background-color: $Black;
+                        margin: .3em;
+                        height: 3px;
+                        width: 25px;
+                        transform-origin: 9% 56%;
+                        transition: all 250ms ease-in-out;
                     }
-                    >span:nth-child(2) {
-                        opacity: 0;
-                        background-color: $Black;
-                    }
-                    >span:last-child {
-                        transform: rotate(-45deg);
-                        background-color: $Black;
+                    &.close {
+                        >span:first-child {
+                            transform: rotate(45deg);
+                            background-color: $Black;
+                        }
+                        >span:nth-child(2) {
+                            opacity: 0;
+                            background-color: $Black;
+                        }
+                        >span:last-child {
+                            transform: rotate(-45deg);
+                            background-color: $Black;
+                        }
                     }
                 }
             }
         }
-    }
-    .logo {
-        margin-left: -0.5em;
-        position: relative;
-        z-index: 10;
-    }
-    .menu {
-        background: $white;
-        position: fixed;
-        top: 0;
-        width: 80%;
-        bottom: 0;
-        z-index: 12;
-        margin-left: auto;
-        left: 0;
-        right: 0;
-        height: 100vh;
-        transition: all 250ms ease-in-out;
-        .nav-links {
-            flex-direction: column;
-            width: 85%;
-            height: 100vh;
-            margin: 0 auto;
-            justify-content: center;
-            align-items: center;
-            .nav-btn-link {
-                margin-top: 2.5em;
-                margin-right: 1em;
-                border: 2px solid $Black;
-                a {
-                    .btn-link {
-                        border: none;
-                        padding: 0.3em 0.5em;
-                        background-color: $white;
-                        font-size: 1.5rem !important;
+        .logo {
+            margin-left: -0.5em;
+            position: relative;
+            z-index: 10;
+        }
+        .menu {
+            background: $white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 250ms ease-in-out;
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                .nav-btn-link {
+                    margin-top: 2.5em;
+                    margin-right: 1em;
+                    border: 2px solid $Black;
+                    a {
+                        .btn-link {
+                            border: none;
+                            padding: 0.3em 0.5em;
+                            background-color: $white;
+                            font-size: 1.5rem !important;
+                        }
                     }
                 }
-            }
-            .nav-link {
-                font-size: 1.5rem;
-                margin-bottom: 0.7em;
-                .nav-link-item {
-                    margin: 0em;
-                    text-transform: uppercase;
-                    font-family: $text;
-                    color: $Black !important;
+                .nav-link {
+                    font-size: 1.5rem;
+                    margin-bottom: 0.7em;
+                    .nav-link-item {
+                        margin: 0em;
+                        text-transform: uppercase;
+                        font-family: $text;
+                        color: $Black !important;
+                    }
                 }
             }
         }
