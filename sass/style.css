@@ -636,8 +636,8 @@ ul li a {
     margin: 0 auto;
     font-size: 2rem;
   }
-  .review-section .review-container .card-container .card {
-    margin: 0.5em;
+  .review-section .review-container .card-container .card:last-child {
+    margin-right: 0.5em;
   }
   .footer .footer-container .top {
     -webkit-box-orient: vertical;

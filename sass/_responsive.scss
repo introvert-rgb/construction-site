@@ -177,8 +177,8 @@
             margin: 0 auto;
             font-size: 2rem;
             .card-container {
-                .card {
-                    margin: 0.5em;
+                .card:last-child {
+                    margin-right: 0.5em;
                 }
             }
         }
