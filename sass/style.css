@@ -6,6 +6,11 @@
           box-sizing: border-box;
 }
 
+.shadow {
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
 .menu-hamburger {
   display: none;
 }
@@ -53,7 +58,7 @@ ul li a {
   width: 100%;
 }
 
-.header .nav-container nav {
+.header .nav-container .nav {
   width: 100%;
   padding: 1.6em;
   max-width: 1440px;
@@ -72,23 +77,23 @@ ul li a {
   transition: all 250ms ease-in-out;
 }
 
-.header .nav-container nav::after {
+.header .nav-container .nav::after {
   content: '';
   position: absolute;
   top: 0;
   width: 100%;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   z-index: -1;
   bottom: 0;
 }
 
-.header .nav-container nav .logo img {
+.header .nav-container .nav .logo img {
   height: 40px;
 }
 
-.header .nav-container nav .menu .nav-links {
+.header .nav-container .nav .menu .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,12 +105,12 @@ ul li a {
           align-items: center;
 }
 
-.header .nav-container nav .menu .nav-links .nav-btn-link {
+.header .nav-container .nav .menu .nav-links .nav-btn-link {
   border: 2px solid black;
   margin-left: 1em;
 }
 
-.header .nav-container nav .menu .nav-links .nav-btn-link a .btn-link {
+.header .nav-container .nav .menu .nav-links .nav-btn-link a .btn-link {
   cursor: pointer;
   border: none;
   font-weight: 400;
@@ -118,19 +123,19 @@ ul li a {
   transition: all 250ms ease-in-out;
 }
 
-.header .nav-container nav .menu .nav-links .nav-btn-link a .btn-link:hover {
+.header .nav-container .nav .menu .nav-links .nav-btn-link a .btn-link:hover {
   color: white;
   background-color: black;
 }
 
-.header .nav-container nav .menu .nav-links .nav-link .nav-link-item {
+.header .nav-container .nav .menu .nav-links .nav-link .nav-link-item {
   margin: 0em 1em;
   font-family: "Alata", sans-serif;
   color: black;
   position: relative;
 }
 
-.header .nav-container nav .menu .nav-links .nav-link .nav-link-item::after {
+.header .nav-container .nav .menu .nav-links .nav-link .nav-link-item::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -148,7 +153,7 @@ ul li a {
           transform-origin: right;
 }
 
-.header .nav-container nav .menu .nav-links .nav-link .nav-link-item:hover::after {
+.header .nav-container .nav .menu .nav-links .nav-link .nav-link-item:hover::after {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: left;
@@ -241,6 +246,10 @@ ul li a {
   font-family: "Alata", sans-serif;
   font-size: 2.5rem;
   padding-bottom: 1em;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .about-section .about-content .about-details .about-details-content {
@@ -280,6 +289,7 @@ ul li a {
   background-size: cover;
   background-position: center;
   margin-bottom: 5em;
+  padding-bottom: 7em;
 }
 
 .review-section .review-container {
@@ -305,20 +315,6 @@ ul li a {
 
 .review-section .review-container h1 {
   padding: 0.5em;
-}
-
-.review-section .review-container .dots-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.review-section .review-container .dots-container .dots {
-  margin: 0.5em;
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  background: white;
 }
 
 .review-section .review-container .card-container {

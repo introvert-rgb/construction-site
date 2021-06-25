@@ -7,10 +7,11 @@ function position() {
 
 
     if (window.pageYOffset > 40) {
-
+        nav.classList.add('shadow');
         nav.classList.add('bg-white');
     } else {
-        nav.classList.remove('bg-white')
+        nav.classList.remove('bg-white');
+        nav.classList.remove('shadow');
     }
 
 }
