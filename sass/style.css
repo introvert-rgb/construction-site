@@ -7,8 +7,8 @@
 }
 
 .shadow {
-  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .menu-hamburger {
@@ -443,6 +443,10 @@ ul li a {
   .fixed {
     overflow: hidden;
   }
+  .shadow {
+    -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  }
   .open {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -655,6 +659,10 @@ ul li a {
 @media screen and (max-width: 1023px) {
   .fixed {
     position: fixed;
+  }
+  .shadow {
+    -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
   }
   .open {
     -webkit-transform: translateX(100%);
