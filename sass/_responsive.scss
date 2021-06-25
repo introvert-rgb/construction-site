@@ -176,6 +176,11 @@
             width: 100%;
             margin: 0 auto;
             font-size: 2rem;
+            .card-container {
+                .card {
+                    margin: 0.5em;
+                }
+            }
         }
     }
     .footer {
@@ -332,6 +337,19 @@
                         color: $white;
                         background-color: $Black;
                     }
+                }
+            }
+        }
+    }
+    .review-section {
+        margin-bottom: 5rem;
+        .review-container {
+            width: 100%;
+            margin: 0 auto;
+            font-size: 2rem;
+            .card-container {
+                .card {
+                    margin: 0.5em;
                 }
             }
         }
