@@ -27,7 +27,7 @@
                         margin: .3em;
                         height: 3px;
                         width: 25px;
-                        transform-origin: 7% 68%;
+                        transform-origin: 9% 56%;
                         transition: all 250ms ease-in-out;
                     }
                     &.close {
@@ -197,6 +197,28 @@
                         margin: 0em 0.7em;
                     }
                 }
+            }
+        }
+    }
+    .gallery {
+        .container {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+    .photo-full {
+        .photo-container {
+            width: 100%;
+            .full-img {
+                width: 95%;
+            }
+            svg {
+                top: -10%;
+                right: 3%;
+            }
+            .text-input {
+                font-size: 2rem;
             }
         }
     }

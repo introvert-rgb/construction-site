@@ -34,3 +34,30 @@ menuBtn.addEventListener('click', () => {
 
     }
 })
+
+//modal
+let reference = document.querySelectorAll('.grid-item-img');
+let refImg = document.querySelectorAll('.refImg');
+let fullImg = document.querySelector('.full-img');
+let display = document.querySelector('.photo-full');
+let closeBtn = document.querySelector('.close');
+let photoContainer = document.querySelector('.photo-container');
+let textInput = document.querySelector('.text-input');
+let picText = document.querySelector('.pic-text');
+for (let i = 0; i < reference.length; i++) {
+    reference[i].addEventListener('click', () => {
+        display.style.display = 'flex';
+        fullImg.setAttribute('src', refImg[i].src);
+        textInput.innerHTML = picText.innerHTML;
+
+    })
+}
+closeBtn.addEventListener('click', () => {
+    display.style.display = 'none';
+})
+window.addEventListener('click', (e) => {
+    if (e.target == display || e.target == photoContainer) {
+        display.style.display = 'none';
+
+    }
+})
