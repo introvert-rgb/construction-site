@@ -147,7 +147,7 @@ ul {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    margin-bottom: 5em;
+    margin-bottom: 7em;
     .title-box {
         width: 80%;
         margin: 0 auto;
@@ -173,7 +173,7 @@ ul {
 .about-section {
     width: 100%;
     max-width: 1440px;
-    margin-bottom: 6em;
+    margin-bottom: 7em;
     .about-content {
         width: 80%;
         margin: 0 auto;
@@ -239,7 +239,7 @@ ul {
     padding: 1em;
     background-size: cover;
     background-position: center;
-    margin-bottom: 5em;
+    margin-bottom: 7em;
     padding-bottom: 7em;
     .review-container {
         width: 80%;
@@ -320,7 +320,7 @@ ul {
             .social-media {
                 display: flex;
                 li {
-                    margin: 0em 1.5em;
+                    margin-left: 2em;
                     list-style-type: none;
                 }
             }

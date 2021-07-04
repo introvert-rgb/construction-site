@@ -177,7 +177,7 @@ ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 5em;
+  margin-bottom: 7em;
 }
 
 .title-container .title-box {
@@ -206,7 +206,7 @@ ul li a {
 .about-section {
   width: 100%;
   max-width: 1440px;
-  margin-bottom: 6em;
+  margin-bottom: 7em;
 }
 
 .about-section .about-content {
@@ -288,7 +288,7 @@ ul li a {
   padding: 1em;
   background-size: cover;
   background-position: center;
-  margin-bottom: 5em;
+  margin-bottom: 7em;
   padding-bottom: 7em;
 }
 
@@ -424,7 +424,7 @@ ul li a {
 }
 
 .footer .footer-container .top .social-media li {
-  margin: 0em 1.5em;
+  margin-left: 2em;
   list-style-type: none;
 }
 
@@ -456,6 +456,7 @@ ul li a {
 .gallery {
   max-width: 1440px;
   width: 100%;
+  margin-bottom: 7em;
 }
 
 .gallery .container {
@@ -464,10 +465,12 @@ ul li a {
 }
 
 .gallery .container .title {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Alata", sans-serif;
   font-size: 4rem;
   margin-top: 1rem;
+  text-align: center;
   margin-bottom: 1em;
+  text-transform: uppercase;
 }
 
 .gallery .container .gallery-grid {
@@ -477,22 +480,40 @@ ul li a {
   place-items: center;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
+  -webkit-column-gap: 2.5em;
+          column-gap: 2.5em;
+  row-gap: 1em;
 }
 
 .gallery .container .gallery-grid .gallery-grid-item {
   width: 100%;
 }
 
+.gallery .container .gallery-grid .gallery-grid-item .pic-text {
+  margin-top: 0.5em;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+}
+
 .gallery .container .gallery-grid .gallery-grid-item .grid-item-img {
   margin: 0 auto;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .gallery .container .gallery-grid .gallery-grid-item .grid-item-img img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.gallery .container .gallery-grid .gallery-grid-item .grid-item-img img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0.7;
 }
 
 .photo-full {
@@ -536,8 +557,8 @@ ul li a {
 .photo-full .photo-container svg {
   position: absolute;
   z-index: 100;
-  top: -10%;
-  right: 10%;
+  top: 0%;
+  right: 5%;
   cursor: pointer;
 }
 
@@ -769,6 +790,11 @@ ul li a {
   }
   .footer .footer-container .top .social-media li {
     margin: 0em 0.7em;
+  }
+  .footer .footer-container .copyright {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .gallery .container .gallery-grid {
     -ms-grid-columns: (1fr)[2];
